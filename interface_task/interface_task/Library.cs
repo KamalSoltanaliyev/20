@@ -24,7 +24,7 @@ namespace interface_task
         {
             if (newBook == null || string.IsNullOrWhiteSpace(newBook.Name) || string.IsNullOrWhiteSpace(newBook.AuthorName) || newBook.PageCount <= 0)
             {
-                throw new ArgumentException("Name, AuthorName, and PageCount are required for creating a book.");
+                throw new ArgumentException("Name, AuthorName, and PageCount book yazmaq ucun lazimdi.");
             }
 
             if (Array.Exists(Books, book => book != null && book.Name.Equals(newBook.Name, StringComparison.OrdinalIgnoreCase) && !book.IsDeleted))
